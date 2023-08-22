@@ -23,12 +23,114 @@
         h1 {
             color: black;
         }
+
+        hr {
+            border-top: 1px solid white;
+        }
     </style>
 
 </head>
 
 <body>
+    <header style="display:block;">
+        <button class="toggleButton" data-target="powervsforce" style="display:inline;">
+            <h1>
+                Power Vs Force
+            </h1>
+        </button>
+        <button class="toggleButton" data-target="eyeofi" style="display:inline;">
+            <h1>
+                Eye Of The I
+            </h1>
+        </button>
+        <button class="toggleButton" data-target="ireality" style="display:inline;">
+            <h1>
+                I, Reality And Subjectivity
+            </h1>
+        </button>
+    </header>
+    <hr>
 
+
+    <div id="powervsforce" style="display: none;">
+        <h2>Power Vs Force</h2>
+        <h2>Chapter Count: 21</h2>
+
+        <ul>
+            <li>
+                Part One: Toolsasdfasd
+                <ul>
+                    <li>
+                        prefaceadsfasdf
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Part Two:fsdafasdfaf
+            </li>
+            <li>
+                Part Three:
+            </li>
+        </ul>
+
+    </div>
+
+
+    <div id="eyeofi" style="display: none;">
+        <h2>Eye Of The I</h2>
+        <h2>Chapter Count: 21</h2>
+
+        <ul>
+            <li>
+                Part One: Tools
+                <ul>
+                    <li>
+                        preface
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Part Two:
+            </li>
+            <li>
+                Part Three:
+            </li>
+        </ul>
+
+
+    </div>
+
+    <div id="ireality" style="display: none;">
+        <h2>I, Reality And Subjectivity</h2>
+        <h2>Chapter Count: 21</h2>
+
+        <ul>
+            <li>
+                Part One: Tools
+                <ul>
+                    <li>
+                        preface
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Part Two:
+            </li>
+            <li>
+                Part Three:
+            </li>
+        </ul>
+
+
+    </div>
+
+
+
+
+
+
+
+    <hr>
     <div>
         <h2>
             Disclaimer
@@ -39,89 +141,27 @@
             book precisely so that i can use them or teach them for people' benefit
         </p>
     </div>
-
-    <button class="toggleButton" data-target="powervsforce" style="display:block;">
-        <h1>
-            Power Vs Force
-        </h1>
-    </button>
-
-    <div id="powervsforce" style="display: none;">
-
-        <h2>Chapter Count: 21</h2>
-
-        <ul>
-            <li>
-                Part One: Tools
-                <ul>
-                    <li>
-                        preface
-                    </li>
-                </ul>
-            </li>
-            <li>
-                Part Two:
-            </li>
-            <li>
-                Part Three:
-            </li>
-        </ul>
-
-    </div>
-
-    <button class="toggleButton" data-target="eyeofi" style="display:block;">
-        <h1>
-            Eye Of The I
-        </h1>
-    </button>
-
-
-    <div id="eyeofi" style="display: none;">
-
-        <h2>Chapter Count: 21</h2>
-
-        <ul>
-            <li>
-                Part One: Tools
-                <ul>
-                    <li>
-                        preface
-                    </li>
-                </ul>
-            </li>
-            <li>
-                Part Two:
-            </li>
-            <li>
-                Part Three:
-            </li>
-        </ul>
-
-
-    </div>
-
-
-
-
-
-
-
-
-
-
-
+    <hr>
     <script>
         const toggleButtons = document.querySelectorAll(".toggleButton");
+        const contentDivs = document.querySelectorAll(".content");
+        let currentOpenDiv = null;
 
         toggleButtons.forEach(button => {
             button.addEventListener("click", () => {
                 const targetId = button.getAttribute("data-target");
                 const targetDiv = document.getElementById(targetId);
 
+                if (currentOpenDiv && currentOpenDiv !== targetDiv) {
+                    currentOpenDiv.style.display = "none";
+                }
+
                 if (targetDiv.style.display === "none") {
                     targetDiv.style.display = "block";
+                    currentOpenDiv = targetDiv;
                 } else {
                     targetDiv.style.display = "none";
+                    currentOpenDiv = null;
                 }
             });
         });
