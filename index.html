@@ -1,27 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>David R. Hawkins Study</title>
+
+    <style>
+        * {
+            color: rgb(211, 211, 211);
+        }
+
+        body {
+            background-color: rgb(22, 22, 22);
+        }
+
+        button {
+            color: black;
+        }
+
+        h1 {
+            color: black;
+        }
+    </style>
+
 </head>
+
 <body>
+
     <div>
-        <h1>
+        <h2>
             Disclaimer
-        </h1>
+        </h2>
+
         <p>
-            I realise this is a very left brain way to study the material but my intention is to be able to recall the book precisely so that i can use them or teach them for people' benefit
+            I realise this is a very left brain way to study the material but my intention is to be able to recall the
+            book precisely so that i can use them or teach them for people' benefit
         </p>
     </div>
-    
 
-    <div id="powervsforce">
+    <button class="toggleButton" data-target="powervsforce" style="display:block;">
         <h1>
             Power Vs Force
         </h1>
-        
+    </button>
+
+    <div id="powervsforce" style="display: none;">
+
         <h2>Chapter Count: 21</h2>
 
         <ul>
@@ -40,10 +66,66 @@
                 Part Three:
             </li>
         </ul>
-        
 
     </div>
 
-    
+    <button class="toggleButton" data-target="eyeofi" style="display:block;">
+        <h1>
+            Eye Of The I
+        </h1>
+    </button>
+
+
+    <div id="eyeofi" style="display: none;">
+
+        <h2>Chapter Count: 21</h2>
+
+        <ul>
+            <li>
+                Part One: Tools
+                <ul>
+                    <li>
+                        preface
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Part Two:
+            </li>
+            <li>
+                Part Three:
+            </li>
+        </ul>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        const toggleButtons = document.querySelectorAll(".toggleButton");
+
+        toggleButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                const targetId = button.getAttribute("data-target");
+                const targetDiv = document.getElementById(targetId);
+
+                if (targetDiv.style.display === "none") {
+                    targetDiv.style.display = "block";
+                } else {
+                    targetDiv.style.display = "none";
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>
