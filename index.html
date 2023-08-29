@@ -47,11 +47,13 @@
             color: white;
         }
 
+        /*
         li {
             font-size: 12pt;
             color: white;
         }
 
+        
         button {
             color: white;
             background-color: rgb(60, 60, 60);
@@ -61,69 +63,104 @@
 
             margin-top: 2px;
             margin-bottom: 2px;
-        }
+        }*/
     </style>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 
 <body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">David R. Hawkins Kitap Çalışmaları</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="https://veritaspub.com/">Veritas
+                            Publishing</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Books
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><button class="dropdown-item toggleButton" data-target="powervsforce"
+                                    style="display:inline;">
+                                    Power VS Force
+                                </button></li>
+                            <li><button class="dropdown-item toggleButton" data-target="eyeofi" style="display:inline;">
+                                    Eye Of The I
+                                </button></li>
+                            <li><button class="dropdown-item toggleButton" data-target="ireality"
+                                    style="display:inline;">
+                                    I, Reality And Subjectivity
+                                </button></li>
+                            <li><button class="dropdown-item toggleButton" data-target="truthvsfalse"
+                                    style="display:inline;">
+                                    Truth VS Falsehood
+                                </button></li>
+                            <li><button class="dropdown-item toggleButton" data-target="transcending"
+                                    style="display:inline;">
+                                    Transcending the Levels of Consciousness: The Stairway to Enlightenment
+                                </button></li>
+                            <li><button class="dropdown-item toggleButton" data-target="devotion"
+                                    style="display:inline;">
+                                    Discovery of the Presence of God: Devotional Nonduality
+                                </button></li>
+                            <li><button class="dropdown-item toggleButton" data-target="modernman"
+                                    style="display:inline;">
+                                    Reality, Spirituality and Modern Man
+                                </button></li>
+                            <li><button class="dropdown-item toggleButton" data-target="healandrecover"
+                                    style="display:inline;">
+                                    Healing And Recovery
+                                </button></li>
+                            <li><button class="dropdown-item toggleButton" data-target="lettinggo"
+                                    style="display:inline;">
+                                    Letting Go
+                                </button></li>
+                            <li><button class="dropdown-item toggleButton" data-target="successforyou"
+                                    style="display:inline;">
+                                    Success Is For You
+                                </button></li>
+                            <li><button class="dropdown-item toggleButton" data-target="themapofcons"
+                                    style="display:inline;">
+                                    The Map Of Consciousness Explained
+                                </button></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <header style="display:block;">
 
-        <button class="toggleButton" data-target="powervsforce" style="display:inline;">
-            <h1>
-                Power VS Force
-            </h1>
-        </button>
-        <button class="toggleButton" data-target="eyeofi" style="display:inline;">
-            <h1>
-                Eye Of The I
-            </h1>
-        </button>
-        <button class="toggleButton" data-target="ireality" style="display:inline;">
-            <h1>
-                I, Reality And Subjectivity
-            </h1>
-        </button>
-        <button class="toggleButton" data-target="truthvsfalse" style="display:inline;">
-            <h1>
-                Truth VS Falsehood
-            </h1>
-        </button>
-        <button class="toggleButton" data-target="transcending" style="display:inline;">
-            <h1>
-                Transcending the Levels of Consciousness: The Stairway to Enlightenment
-            </h1>
-        </button>
-        <button class="toggleButton" data-target="devotion" style="display:inline;">
-            <h1>
-                Discovery of the Presence of God: Devotional Nonduality
-            </h1>
-        </button>
-        <button class="toggleButton" data-target="modernman" style="display:inline;">
-            <h1>
-                Reality, Spirituality and Modern Man
-            </h1>
-        </button>
-        <button class="toggleButton" data-target="healandrecover" style="display:inline;">
-            <h1>
-                Healing And Recovery
-            </h1>
-        </button>
-        <button class="toggleButton" data-target="lettinggo" style="display:inline;">
-            <h1>
-                Letting Go
-            </h1>
-        </button>
-        <button class="toggleButton" data-target="successforyou" style="display:inline;">
-            <h1>
-                Success Is For You
-            </h1>
-        </button>
-        <button class="toggleButton" data-target="themapofcons" style="display:inline;">
-            <h1>
-                The Map Of Consciousness Explained
-            </h1>
-        </button>
+
     </header>
     <hr>
 
@@ -435,6 +472,10 @@
             });
         });
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
