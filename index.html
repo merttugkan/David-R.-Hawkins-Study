@@ -79,12 +79,14 @@
             margin-bottom: 2px;
         }
 
-        /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
+
+        /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover)
         .active,
         .collapsible:hover {
-            /* background-color: #ccc;*/
+             background-color: #ccc;
         }
-
+        */
         /* Style the collapsible content. Note: hidden by default */
         .content {
             padding: 0 18px;
@@ -98,16 +100,16 @@
 </head>
 
 <body>
+    <!-- Navbar -->
     <header class="bg-body-tertiary">
         <nav class="navbar navbar-expand-md">
             <div class="container-lg">
-                <img src="logo.png" width="50" height="50" alt="">
-                <h1 class="navbar-brand me-auto" style="padding-bottom: 0%; font-size: large;">David R. Hawkins Kitap
-                    Çalışmaları</h1>
+                <h1 class="navbar-brand me-auto" style="padding-bottom: 0%; font-size: x-large;">David R. Hawkins Kitap
+                    Özetleri</h1>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <img src="logo.png" width="30" height="30" alt="">
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-6 mb-lg-0">
@@ -166,6 +168,24 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
+                                Ekler
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <button class="dropdown-item toggleButton" data-target="-" style="display:inline;">
+                                        Bilinç Haritası
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="dropdown-item toggleButton" data-target="-" style="display:inline;">
+                                        Kinesyoloji Test Yöntemi
+                                    </button>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                                 Notlar
                             </a>
                             <ul class="dropdown-menu">
@@ -179,27 +199,28 @@
                             <a class="nav-link" aria-current="page" href="https://veritaspub.com/">Veritas
                                 Publishing</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="https://veritaspub.com/">Ben
-                            </a>
-                        </li>
                     </ul>
 
                 </div>
             </div>
         </nav>
     </header>
+
+    <!-- Books -->
     <br>
     <div class="bg-body-tertiary">
         <div class="container-lg">
-            <div id="powervsforce" style="display: none;">
+            <div id="powervsforce" style="display: block;">
                 <br>
-                <h2>Power Vs Force</h2>
-                <h2>Hidden Determinants Of Human Behaviour</h2>
-                <h3>2 Old 2 New Foreword And Preface</h3>
-                <h3>Chapter Count: 24</h3>
+                <h1>Güce Karşı Kuvvet</h1>
+                <h2>İnsan Davranışlarını Belirleyen Gizli Etkenler</h2>
+                <br>
+                <h3>Bölüm Sayısı: 24</h3>
+                <br>
 
                 <ul>
+                    <h3>İçindekiler</h3>
+                    <li></li>
                     <li>
                         Part One: Tools
                         <ul>
@@ -215,9 +236,29 @@
                         Part Three: Meaning
                     </li>
                 </ul>
-                <h3> Appendix </h3>
-                <br>
 
+                <h3> Bölümlerin Kalibrasyonu </h3>
+                <ol>
+                    <h3>İçindekiler</h3>
+                    <li>
+                        Bölüm
+                    </li>
+                    <li>
+                        Bölüm
+                    </li>
+                </ol>
+                <h3> Özetlerin Kalibrasyonu </h3>
+                <ol>
+                    <h3>İçindekiler</h3>
+                    <li>
+                        Bölüm
+                    </li>
+                    <li>
+                        Bölüm
+                    </li>
+                </ol>
+
+                <br>
             </div>
 
             <div id="eyeofi" style="display: none;">
@@ -467,17 +508,23 @@
         </div>
     </div>
     <br>
+
+    <!-- disclaimer -->
     <div class="bg-body-tertiary">
         <div class="container-lg">
             <br>
             <h2>
-                Disclaimer
+                Uyarı
             </h2>
+            <br>
 
             <p>
-                I realise this is a very left brain way to study the material but my intention is to be able to recall
-                the
-                book precisely so that i can use them or teach them for people' benefit
+                Bu sitesinin temel amacı kendim öğrenirken ve çevremdeki
+                insanlar da öğrenirken destek amaçlı kullanılacak bir kaynak niteliğindedir.
+            </p>
+            <p>
+                Bahsi geçen kitaplar ve kaynakların hepsi David R Hawkins tarafından hazırlanmış ve
+                Veritas Publishing ile tesçillenmiştir.
             </p>
             <br>
         </div>
@@ -509,7 +556,8 @@
     <script>
         const toggleButtons = document.querySelectorAll(".toggleButton");
         const contentDivs = document.querySelectorAll(".content");
-        let currentOpenDiv = null;
+
+        let currentOpenDiv = document.getElementById("powervsforce");
 
         toggleButtons.forEach(button => {
             button.addEventListener("click", () => {
